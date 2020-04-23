@@ -1,0 +1,203 @@
+	<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Employee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">-
+    
+    
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3> Add Employee</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/createEmployee}" th:object="${employee}" method="post">
+                        <div class="row">
+                             <div class="form-group col-md-8">
+                                
+                                <label for="name" class="col-form-label">Employee Name on Apple Directory</label>
+                                <label th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"
+								class="validation-message"></label> 
+								
+                                <input type="text" th:field="*{employeeName}" class="form-control" 
+                                            id="employeeName"  />
+                                            
+                                 
+                            </div>
+                            
+                            
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">Employee Number</label> 
+                                <input type="text" th:field="*{employeeNumber}" class="form-control" 
+                                            id="lastName"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Group/Project Code</label> 
+                                <input type="text" th:field="*{projectCode}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Apple Manager</label> 
+                                <input type="text" th:field="*{appleManager}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Infosys Manager</label> 
+                                <input type="text" th:field="*{infyManager}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">SOW Role</label> 
+                                <input type="text" th:field="*{sowRole}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Offshore COD Name</label> 
+                                <input type="text" th:field="*{offShoreCodName}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Info</label> 
+                                <input type="text" th:field="*{info}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Infy Joining Date</label> 
+                                <input type="text" th:field="*{infyJoiningDate}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Apple Account Creation Date</label> 
+                                <input type="text" th:field="*{appleAccountCreationDate}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">APS Joining Date</label> 
+                                <input type="text" th:field="*{apsJoiningDate}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Prior Ex</label> 
+                                <input type="text" th:field="*{priorEx}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Infy Ex</label> 
+                                <input type="text" th:field="*{infyEx}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Total Ex</label> 
+                                <input type="text" th:field="*{totalEx}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Prior APS Experience</label> 
+                                <input type="text" th:field="*{priorApsExperience}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">APS Ex</label> 
+                                <input type="text" th:field="*{apsEx}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Prior Apple Experience</label> 
+                                <input type="text" th:field="*{priorAppleExperience}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Total Apple Ex</label> 
+                                <input type="text" th:field="*{totalAppleExperience}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">TE Bucket</label> 
+                                <input type="text" th:field="*{teBucket}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">APS Bucket</label> 
+                                <input type="text" th:field="*{apsBucket}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Apple Bucket</label> 
+                                <input type="text" th:field="*{appleBucket}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Location</label> 
+                                <input type="text" th:field="*{location}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">PO#</label> 
+                                <input type="text" th:field="*{po}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">PO Description</label> 
+                                <input type="text" th:field="*{poDescription}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Name as in Infosys Directory</label> 
+                                <input type="text" th:field="*{nameInInfosysDirectory}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Apple E-mail ID</label> 
+                                <input type="text" th:field="*{appleEmailId}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">DS ID</label> 
+                                <input type="text" th:field="*{dsId}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Interview Cleared Date</label> 
+                                <input type="text" th:field="*{interviewClearedDate}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Infosys E-mail ID</label> 
+                                <input type="text" th:field="*{infosyEmailId}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">Present State</label> 
+                                <input type="text" th:field="*{presentState}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="email" class="col-form-label">LWD</label> 
+                                <input type="text" th:field="*{lwd}" class="form-control" 
+                                            id="email"  />
+                            </div>
+                            
+
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value=" Submit ">
+                            </div>
+
+                            <input type="hidden" id="employeeNumber" th:field="*{employeeNumber}">
+    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

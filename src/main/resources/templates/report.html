@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<style type="text/css">
+.row {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.block {
+	float: left;
+}
+</style>
+</head>
+
+
+<body>
+<div>
+	<div class="container my-5">
+		<h3> Report</h3>
+			<div class="card">
+				<div class="card-body">
+                	<div class="col-md-10">
+                    	<form action="#" th:action="@{/report}" th:object="${employee}" method="post">
+                    		<div class="row">
+                    			<div class="form-group col-md-8"><input type="checkbox" name="Employee Number"/>&nbsp<label for="name" class="col-form-label">Employee Number</label></div>
+                    			<div class="form-group col-md-8"><input type="checkbox" name="Employee Name"/>&nbsp<label for="name" class="col-form-label">Employee Name</label> </div>
+                    		
+                    		
+                    			<div class="col-md-6">
+                                	<input type="submit" class="btn btn-primary" value="Generate Report">
+                            	</div>
+                    		</div>
+                    	</form>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+	
+</body>
+
+<script type="text/javascript">
+boolean Employee_Number = 0;
+
+$(document).ready(function(){}
+	$('input[type="checkbox"]').click(function){
+		if($(this).prop("checked") == true){
+			alert("Employee");
+		}
+		else{
+			alert("No Employee");
+		}
+	}
+
+});
+                    		
+
+ </script>
+
+</html>
